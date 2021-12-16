@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Main page</title>
+	<link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-primary text-white p-2">
+			<a href="/" class="navbar-brand">Demo</a>
+			<ul class="navbar-nav">
+				<% if(user.userid) { %>
+				<li class="nav-item"><a href="/logout" class="nav-link">Log out</a></li>
+				<% } else { %>
+				<li class="nav-item"><a href="/signup" class="nav-link">Sign up</a></li>
+				<li class="nav-item"><a href="/login" class="nav-link">Log in</a></li>
+				<% } %>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="container-fluid m-2">
+		<% if(user.userid) { %>
+			<h1>Welcome, <%= user.username %></h1>
+		<% } else { %>
+			<h1>You are not logged in</h1>
+		<% } %>
+		</div>
+	</main>
+</body>
+</html>

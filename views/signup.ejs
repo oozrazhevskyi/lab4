@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign up</title>
+	<link rel="stylesheet" href="/bootstrap.min.css">
+	<link rel="stylesheet" href="/open-iconic-bootstrap.css">
+</head>
+<body>
+	<div class="container p-5">
+	<h1>Registration</h1>
+	<form action="/signup" method="post">
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text oi oi-person"></span>
+					</div>
+					<input type="text" class="form-control" placeholder="Full name" name="name" id="fullname">
+				</div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text oi oi-envelope-closed"></span>
+					</div>
+					<input type="email" class="form-control" placeholder="Email address" name="email" id="email">
+				</div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text oi oi-phone"></span>
+					</div>
+					<select name="phoneprefix" id="phoneprefix" class="form-control">
+						<option value="+971">+971</option>
+						<option value="+380">+380</option>
+					</select>
+					<input type="text" class="form-control" placeholder="Phone number" name="phone" id="phonenumber">
+				</div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text oi oi-briefcase"></span>
+					</div>
+					<select class="form-control" name="job" id="jobtype">
+						<option selected>Select job type</option>
+						<option value="frontend">Frontend</option>
+						<option value="backend">Backend</option>
+						<option value="fullstack">Fullstack</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text oi oi-lock-locked"></span>
+					</div>
+					<input type="password" class="form-control" placeholder="Create password" name="password" id="password">
+				</div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text oi oi-lock-locked"></span>
+					</div>
+					<input type="password" class="form-control" placeholder="Repeat password" name="repeatedpassword" id="passwordcheck">
+				</div>
+			</div>
+		</div>
+		<input type="submit" value="Create Account" class='btn-lg bg-primary text-white'>
+	</form>
+	</div>
+
+</body>
+</html>
